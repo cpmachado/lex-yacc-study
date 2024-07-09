@@ -1,15 +1,6 @@
-LDFLAGS = -lfl
-
-OBJ_C = $(wildcard *.c)
-OBJ = $(wildcard *.o)
 BIN = catcot roman-lex
 
-
-all: ${BIN}
-	@echo all built
- 
-clean:
-	rm -f ${BIN} ${OBJ} ${OBJ_C}
+include ../../build.mk
 
 catcol.c: catcot.l
 catcot.o: catcot.c
