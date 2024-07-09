@@ -19,7 +19,7 @@ C { total += 100; }
 D { total += 500; }
 M { total += 1000; }
 
-/* Derived */
+    /* Derived */
 IV { total += 4; }
 IX { total += 9; }
 XL { total += 40; }
@@ -27,7 +27,7 @@ XC { total += 90; }
 CD { total += 400; }
 CM { total += 900; }
 
-/* fail on everything, except newline and space */
+    /* fail on everything, except newline and space */
 [\n ] ;
 
 . { fprintf(stderr, "unexpected: %s\n", yytext); exit(1); }
